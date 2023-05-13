@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { LinkContainer } from 'react-router-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 function Header(props) {
   //inline style for the nav tag
@@ -12,20 +14,22 @@ function Header(props) {
   };
 
   return (
-    <header>
-      <h1>My Portfolio Page</h1>
-      <nav style={navStyle}>
-        <Link to="/">
-          <div>HOME</div>
-        </Link>
-        <Link to="/about">
-          <div>ABOUT</div>
-        </Link>
-        <Link to="/projects">
-          <div>PROJECTS</div>
-        </Link>
-      </nav>
-    </header>
+        <Navbar bg="light" expand="lg">
+            <LinkContainer to ="/">
+            <Navbar.Brand>HOME</Navbar.Brand>
+            </LinkContainer>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+            <LinkContainer to="/about">
+                <Nav.Link>About</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/projects">
+                <Nav.Link>Projects</Nav.Link>
+            </LinkContainer>
+            </Nav>
+        </Navbar.Collapse>
+        </Navbar>
   );
 }
 
