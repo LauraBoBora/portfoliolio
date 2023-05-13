@@ -6,6 +6,7 @@ function About({ about }) {
         <Card>
       <div>
         <h2>{about.name}</h2>
+        <Card.Img className="rounded-circle" style={{height: "50vw", width: "40vw"}} src="https://imgur.com/dN7BOt6.png" />
         <h3>{about.email}</h3>
         <p>{about.bio}</p>
       </div>
