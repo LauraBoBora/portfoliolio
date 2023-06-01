@@ -1,5 +1,5 @@
 // BASE URL OF OUR LOCAL API
-const URL = "http://localhost:4000"
+const URL = "https://portfolio-backend-twzg.onrender.com"
 
 export const projectsLoader = async () => {
     const response = await fetch(URL + "/projects")
